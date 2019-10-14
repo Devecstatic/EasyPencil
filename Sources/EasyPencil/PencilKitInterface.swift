@@ -6,9 +6,9 @@ public protocol PencilKitDelegate: class {
 }
 
 @available(iOS 13.0, *)
-extension PencilKitDelegate {
+public extension PencilKitDelegate {
     
-    public func snapshot(from canvas: PKCanvas) -> UIImage {
+    func snapshot(from canvas: PKCanvas) -> UIImage {
         //Take PencilKit Drawings snapshot
         return UIImage()
     }
@@ -22,15 +22,15 @@ public protocol PencilKitInterface: NSObject {
 }
 
 @available(iOS 13.0, *)
-extension PencilKitInterface {
+public extension PencilKitInterface {
     
-    public func createPencilKitCanvas(frame: CGRect, delegate: PencilKitDelegate) -> PKCanvas {
+    func createPencilKitCanvas(frame: CGRect, delegate: PencilKitDelegate) -> PKCanvas {
         pencilKitCanvas = PKCanvas(frame: frame)
         pencilKitCanvas.pencilKitDelegate = delegate
         return pencilKitCanvas
     }
     
-    public func updateCanvasOrientation(with frame: CGRect) {
+    func updateCanvasOrientation(with frame: CGRect) {
         pencilKitCanvas.updateCanvasOrientation(with: frame)
     }
 }

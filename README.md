@@ -1,3 +1,3 @@
 # EasyPencil
 
-A description of this package.
+PencilKit made easy
