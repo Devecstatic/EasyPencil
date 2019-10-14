@@ -47,27 +47,18 @@ extension PKCanvas: PKCanvasViewDelegate {
     
     /// Delegate method: Note that the drawing has changed.
     public func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
-        print("canvasViewDrawingDidChange")
     }
 }
 
 @available(iOS 13.0, *)
 extension PKCanvas: PKToolPickerObserver {
     
-    public func toolPickerSelectedToolDidChange(_ toolPicker: PKToolPicker) {
-        print("toolPickerSelectedToolDidChange")
-    }
+    public func toolPickerSelectedToolDidChange(_ toolPicker: PKToolPicker) { }
     
-    public func toolPickerIsRulerActiveDidChange(_ toolPicker: PKToolPicker) {
-        print("toolPickerIsRulerActiveDidChange")
-    }
+    public func toolPickerIsRulerActiveDidChange(_ toolPicker: PKToolPicker) { }
     
-    public func toolPickerVisibilityDidChange(_ toolPicker: PKToolPicker) {
-        print("toolPickerVisibilityDidChange")
-    }
+    public func toolPickerVisibilityDidChange(_ toolPicker: PKToolPicker) { }
     
-    public func toolPickerFramesObscuredDidChange(_ toolPicker: PKToolPicker) {
-        print("toolPickerFramesObscuredDidChange")
-    }
+    public func toolPickerFramesObscuredDidChange(_ toolPicker: PKToolPicker) { }
 }
 
