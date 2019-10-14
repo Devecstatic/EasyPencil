@@ -2,7 +2,7 @@ import UIKit
 import PencilKit
 
 @available(iOS 13.0, *)
-public class PKCanvas: UIView {
+open class PKCanvas: UIView {
     
     public var canvasView: PKCanvasView!
     public weak var pencilKitDelegate: PencilKitDelegate?
