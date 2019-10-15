@@ -10,7 +10,7 @@ public extension PencilKitDelegate {
     
     func snapshot(from canvas: PKCanvas) -> UIImage {
         //Take PencilKit Drawings snapshot
-        return UIImage()
+		return canvas.canvasView.drawing.image(from: canvas.bounds, scale: 1)
     }
 }
 
