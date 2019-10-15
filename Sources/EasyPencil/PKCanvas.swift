@@ -6,6 +6,7 @@ open class PKCanvas: UIView {
     
     public var canvasView: PKCanvasView!
     public weak var pencilKitDelegate: PencilKitDelegate?
+	public var isVerbose = false
     
     //MARK: - iOS Life Cycle
     public override init(frame: CGRect) {
@@ -47,18 +48,27 @@ extension PKCanvas: PKCanvasViewDelegate {
     
     /// Delegate method: Note that the drawing has changed.
     public func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
+		if isVerbose { print("Drawing has changed") }
     }
 }
 
 @available(iOS 13.0, *)
 extension PKCanvas: PKToolPickerObserver {
     
-    public func toolPickerSelectedToolDidChange(_ toolPicker: PKToolPicker) { }
+    public func toolPickerSelectedToolDidChange(_ toolPicker: PKToolPicker) {
+		if isVerbose { print("Tool did change") }
+	}
     
-    public func toolPickerIsRulerActiveDidChange(_ toolPicker: PKToolPicker) { }
+    public func toolPickerIsRulerActiveDidChange(_ toolPicker: PKToolPicker) {
+		if isVerbose { print("Ruler is activity changed") }
+	}
     
-    public func toolPickerVisibilityDidChange(_ toolPicker: PKToolPicker) { }
+    public func toolPickerVisibilityDidChange(_ toolPicker: PKToolPicker) {
+		if isVerbose { print("Picker visiblity did change") }
+	}
     
-    public func toolPickerFramesObscuredDidChange(_ toolPicker: PKToolPicker) { }
+    public func toolPickerFramesObscuredDidChange(_ toolPicker: PKToolPicker) {
+		if isVerbose { print("Frames obscured status changed") }
+	}
 }
 
