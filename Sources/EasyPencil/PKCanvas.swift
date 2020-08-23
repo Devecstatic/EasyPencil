@@ -11,11 +11,14 @@ open class PKCanvas: UIView {
     //MARK: - iOS Life Cycle
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        
         setupPencilKitCanvas()
     }
     
     public required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        
+        setupPencilKitCanvas()
     }
     
     public func updateCanvasOrientation(with frame: CGRect) {
